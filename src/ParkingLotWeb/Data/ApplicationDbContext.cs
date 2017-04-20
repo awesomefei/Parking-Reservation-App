@@ -13,7 +13,7 @@ namespace ParkingLotWeb.Data
         public DbSet<ParkingSpace> ParkingSpace { get; set; }
         public DbSet<UnavailableParkingSpace> UnavailableParkingSpace { get; set; }
         public DbSet<AvaliableParkingSpace> AvaliableParkingSpace { get; set; }
-        public DbSet<User> User { get; set; }
+        public DbSet<UserViewModel> UserViewModel { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
