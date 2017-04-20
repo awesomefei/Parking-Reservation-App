@@ -8,6 +8,7 @@ namespace ParkingLotWeb.Models
     public class ParkingSpace
     {
         public int Id { get; set; }
+        public int price { get; set; }
         public string Zoon { get; set; }
         public int SpaceNum { get; set; }
         public string Vehicletype { get; set; }

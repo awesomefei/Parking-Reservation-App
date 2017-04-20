@@ -10,6 +10,11 @@ namespace ParkingLotWeb.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<ParkingSpace> ParkingSpace { get; set; }
+        public DbSet<UnavailableParkingSpace> UnavailableParkingSpace { get; set; }
+        public DbSet<AvaliableParkingSpace> AvaliableParkingSpace { get; set; }
+        public DbSet<User> User { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -18,6 +23,7 @@ namespace ParkingLotWeb.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.Entity<UnavailableParkingSpace>().HasKey(x => new { x.Id });
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);

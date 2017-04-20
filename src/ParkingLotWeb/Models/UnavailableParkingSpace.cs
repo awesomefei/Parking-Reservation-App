@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ParkingLotWeb.Models.ManageViewModels
+namespace ParkingLotWeb.Models
 {
     public class UnavailableParkingSpace
     {
