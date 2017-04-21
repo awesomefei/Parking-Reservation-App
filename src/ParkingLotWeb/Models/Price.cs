@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace ParkingLotWeb.Models
 {
-    public class ParkingSpace
+    public class PriceModel
     {
         public int Id { get; set; }
-        public string Zoon { get; set; }
-        public int SpaceNum { get; set; }
+        public int Price { get; set; }
         public string VehicleType { get; set; }
     }
-    
 }

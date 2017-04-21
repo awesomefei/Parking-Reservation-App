@@ -20,23 +20,21 @@ namespace ParkingLotWeb.Services
             this.repo = repo;
         }
        
-
-        public IEnumerable<ParkingSpace> GetAllParkingSpace()
+        public IEnumerable<ParkingSpace> GetAllPrice()
         {
             return repo.List<ParkingSpace>()
                 .Select(x => new ParkingSpace()
                 {
                     Id = x.Id,
                     SpaceNum = x.SpaceNum,
-                    Vehicletype = x.Vehicletype,
                     Zoon = x.Zoon,
-                    price = x.price
+                    VehicleType=x.VehicleType
                 });
         }
 
         public ParkingSpace GetlParkingSpaceById(int id)
         {
-            ParkingSpace singleParkingSpace = GetAllParkingSpace()
+            ParkingSpace singleParkingSpace = GetAllPrice()
                 .FirstOrDefault(x => x.Id==id);
             return singleParkingSpace;
         }
@@ -49,14 +47,13 @@ namespace ParkingLotWeb.Services
         public bool UpdateParkingSpace(int id, ParkingSpace parkingSpace)
         {
             var record = GetlParkingSpaceById(id);
-            if(record == null)
+            if (record == null)
             {
                 return false;
             }
             record.SpaceNum = parkingSpace.SpaceNum;
-            record.Vehicletype = parkingSpace.Vehicletype;
+            record.VehicleType = parkingSpace.VehicleType;
             record.Zoon = parkingSpace.Zoon;
-            record.price = parkingSpace.price;
             repo.Update<ParkingSpace>(record);
             return true;
         }

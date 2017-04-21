@@ -8,9 +8,10 @@ using ParkingLotWeb.Data;
 namespace ParkingLotWeb.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170421005217_Updated")]
+    partial class Updated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -200,25 +201,13 @@ namespace ParkingLotWeb.Data.Migrations
 
                     b.Property<int>("Id");
 
-                    b.Property<string>("VehicleType");
+                    b.Property<int?>("VehicleTypeId");
 
                     b.HasKey("SpaceNum", "Zoon");
 
+                    b.HasIndex("VehicleTypeId");
+
                     b.ToTable("ParkingSpace");
-                });
-
-            modelBuilder.Entity("ParkingLotWeb.Models.PriceModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("Price");
-
-                    b.Property<string>("VehicleType");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Price");
                 });
 
             modelBuilder.Entity("ParkingLotWeb.Models.UnavailableParkingSpace", b =>
@@ -253,6 +242,20 @@ namespace ParkingLotWeb.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UserViewModel");
+                });
+
+            modelBuilder.Entity("ParkingLotWeb.Models.Vehicle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Price");
+
+                    b.Property<string>("VehicleType");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Vehicle");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRoleClaim<string>", b =>
@@ -290,6 +293,13 @@ namespace ParkingLotWeb.Data.Migrations
                         .WithMany("Roles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ParkingLotWeb.Models.ParkingSpace", b =>
+                {
+                    b.HasOne("ParkingLotWeb.Models.Vehicle", "VehicleType")
+                        .WithMany()
+                        .HasForeignKey("VehicleTypeId");
                 });
         }
     }

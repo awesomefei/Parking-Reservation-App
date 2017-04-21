@@ -52,7 +52,7 @@ namespace ParkingLotWeb
 
             services.AddScoped<ParkingSpaceService>();
             services.AddScoped<IGerneralRepositpry, GerneralRepositpry>();
-           //services.AddScoped<>();
+            services.AddScoped<PriceService>();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();

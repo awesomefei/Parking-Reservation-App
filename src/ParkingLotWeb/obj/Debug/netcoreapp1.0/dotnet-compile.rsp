@@ -235,15 +235,21 @@ C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Controllers
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Controllers\HomeController.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Controllers\ManageController.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Controllers\ParkingSpaceController.cs
+C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Controllers\PriceModelController.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\ApplicationDbContext.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\00000000000000_CreateIdentitySchema.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170420204115_InitDb.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170420204115_InitDb.Designer.cs
+C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170421005217_Updated.cs
+C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170421005217_Updated.Designer.cs
+C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170421175830_UpdatedParkingSpaceAndPriceTable.cs
+C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170421175830_UpdatedParkingSpaceAndPriceTable.Designer.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\ApplicationUser.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\AvaliableParkingSpace.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\ParkingSpace.cs
+C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\Price.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\UnavailableParkingSpace.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\User.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
@@ -268,3 +274,4 @@ C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Services\IE
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Services\ISmsSender.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Services\MessageServices.cs
 C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Services\ParkingSpaceService.cs
+C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Services\PriceService.cs
