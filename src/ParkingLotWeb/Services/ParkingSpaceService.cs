@@ -36,7 +36,8 @@ namespace ParkingLotWeb.Services
 
         public ParkingSpace GetlParkingSpaceById(int id)
         {
-            ParkingSpace singleParkingSpace = GetAllParkingSpace().FirstOrDefault();
+            ParkingSpace singleParkingSpace = GetAllParkingSpace()
+                .FirstOrDefault(x => x.Id==id);
             return singleParkingSpace;
         }
 
@@ -56,10 +57,11 @@ namespace ParkingLotWeb.Services
             record.Vehicletype = parkingSpace.Vehicletype;
             record.Zoon = parkingSpace.Zoon;
             record.price = parkingSpace.price;
+            repo.Update<ParkingSpace>(record);
             return true;
         }
 
-        public bool DeleteMovie(int id)
+        public bool DeleteParkingSpaceById(int id)
         {
             var record = GetlParkingSpaceById(id);
             if(record == null)
@@ -71,8 +73,8 @@ namespace ParkingLotWeb.Services
         }
 
          public void Dispose()
-                {
-                    throw new NotImplementedException();
-                }
+        {
+            repo.Dispose();
+        }
     }
 }

@@ -7,5 +7,5 @@
         'app.views'
     ])
     module.config(Configuration);
-    module.run(Run);
+    //module.run(Run);
 }

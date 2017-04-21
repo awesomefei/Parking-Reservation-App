@@ -23,8 +23,8 @@ namespace ParkingLotWeb.Repositories
 
         public void Delete<T>(T record) where T : class
         {
-            db.Set<T>().Update(record);
-
+            //db.Set<T>().Update(record);
+            db.Set<T>().RemoveRange(record);
             SaveChanges();
         }
 

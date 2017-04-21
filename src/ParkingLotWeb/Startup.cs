@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using ParkingLotWeb.Data;
 using ParkingLotWeb.Models;
 using ParkingLotWeb.Services;
+using ParkingLotWeb.Repositories;
 
 namespace ParkingLotWeb
 {
@@ -48,6 +49,10 @@ namespace ParkingLotWeb
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+
+            services.AddScoped<ParkingSpaceService>();
+            services.AddScoped<IGerneralRepositpry, GerneralRepositpry>();
+           //services.AddScoped<>();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
