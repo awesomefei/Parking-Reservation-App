@@ -3,8 +3,8 @@
         'ngResource',
         'ui.router',
         'ui.bootstrap',
-        'app.services',
-        'app.views'
+        'app.views',
+
     ])
     module.config(Configuration);
     //module.run(Run);

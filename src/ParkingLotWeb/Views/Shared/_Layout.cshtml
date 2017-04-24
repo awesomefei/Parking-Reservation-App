@@ -3,8 +3,8 @@
 <head>
     <base href="/">
     <meta charset="utf-8" />
-    <title>@ViewData["Title"] - ParkingLotWeb</title>
-        <<link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>ParkingLotWeb</title>
+        <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
         <link href="lib/angular/angular-csp.css" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="~/css/site.css" media="screen" />
 </head>
@@ -18,13 +18,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ParkingLotWeb</a>
+                <a class="navbar-brand"  href="#">ParkingLotWeb</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a ui-sref="Secret">Secret</a></li>
                 </ul>
             </div>
         </div>
@@ -42,9 +40,23 @@
         <script src="lib/angular/angular.min.js"></script>
         <script src="lib/angular-resource/angular-resource.min.js"></script>
         <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+        <script src="~/js/models/priceModel.model.js"></script>
+
+        <script src="~/js/views/SecretPage/secret.controller.js"></script>
+        <script src="~/js/views/SecretPage/secret.config.js"></script>
+        <script src="~/js/views/SecretPage/secrete.js"></script>
+
+        <script src="~/js/views/SecretPage/editPriceModel/editPriceModel.controller.js"></script>
+        <script src="~/js/views/SecretPage/editPriceModel/edirPriceModel.config.js"></script>
+        <script src="~/js/views/SecretPage/editPriceModel/editPriceModel.js"></script>
 
 
 
+        <script src="~/js/views/view.js"></script>
+
+        <script src="~/js/app.config.js"></script>
         <script src="js/app.js"></script>
 
 </body>

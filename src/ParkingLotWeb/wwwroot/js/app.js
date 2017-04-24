@@ -4,8 +4,7 @@ var PrkingLotWeb;
         'ngResource',
         'ui.router',
         'ui.bootstrap',
-        'app.services',
-        'app.views'
+        'app.views',
     ]);
     module.config(PrkingLotWeb.Configuration);
     //module.run(Run);
