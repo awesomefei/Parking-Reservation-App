@@ -8,9 +8,10 @@ using ParkingLotWeb.Data;
 namespace ParkingLotWeb.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170424220438_UpdateParkingLot")]
+    partial class UpdateParkingLot
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -202,8 +203,6 @@ namespace ParkingLotWeb.Data.Migrations
                     b.Property<string>("Description");
 
                     b.Property<string>("MapURL");
-
-                    b.Property<string>("Phone");
 
                     b.Property<int>("SpotCount");
 

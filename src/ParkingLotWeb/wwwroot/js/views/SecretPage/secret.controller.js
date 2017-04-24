@@ -34,17 +34,14 @@ var PrkingLotWeb;
                     });
                 };
                 SecretController.prototype.test = function () {
-                    console.log('!!!!!!!!!!!');
                     this.delete(this.deletePriceId);
                 };
                 SecretController.prototype.passId = function (id) {
                     console.log(id);
                     this.deletePriceId = id;
-                    console.log('!!!!!!!!!!!!!!!deletePriceId is' + this.deletePriceId);
                 };
                 SecretController.prototype.delete = function (id) {
                     var _this = this;
-                    console.log('!!!!!!!!!!! delete entering');
                     this.priceModelResource.delete({ id: id }).$promise
                         .then(function (data) {
                         _this.getAllPriceModels();

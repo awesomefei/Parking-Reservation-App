@@ -241,6 +241,8 @@
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170421005217_Updated.Designer.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170421175830_UpdatedParkingSpaceAndPriceTable.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170421175830_UpdatedParkingSpaceAndPriceTable.Designer.cs"
+"C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170424212221_AddParkingLot.cs"
+"C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170424212221_AddParkingLot.Designer.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\ApplicationUser.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\AvaliableParkingSpace.cs"

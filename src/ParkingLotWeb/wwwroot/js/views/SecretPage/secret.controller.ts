@@ -40,18 +40,15 @@
         }
 
         test() {
-            console.log('!!!!!!!!!!!');
             this.delete(this.deletePriceId);
         }
         passId(id: number) {
             console.log(id);
             this.deletePriceId = id;
-            console.log('!!!!!!!!!!!!!!!deletePriceId is' + this.deletePriceId);
 
         }
 
         delete(id: number) {
-            console.log('!!!!!!!!!!! delete entering');
             this.priceModelResource.delete({ id: id }).$promise
                 .then((data) => {
                     this.getAllPriceModels();

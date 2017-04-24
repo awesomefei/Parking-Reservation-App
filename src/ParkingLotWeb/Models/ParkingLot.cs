@@ -7,7 +7,11 @@ namespace ParkingLotWeb.Models
 {
     public class ParkingLot
     {
-        public string mapAddress { get; set;}
-        public int spotCount { get; set; }
+        public int Id { set; get; }
+        public string MapURL { get; set;}
+        public string Phone { get; set; }
+        public string Description { get; set; }
+        public string Address { get; set; }
+        public int SpotCount { get; set; }
     }
 }
