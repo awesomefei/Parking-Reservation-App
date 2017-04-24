@@ -244,6 +244,7 @@
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\ApplicationUser.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\AvaliableParkingSpace.cs"
+"C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\ParkingLot.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\ParkingSpace.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\Price.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\UnavailableParkingSpace.cs"

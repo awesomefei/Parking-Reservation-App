@@ -3,7 +3,8 @@
         static $inject = ['$resource', '$state', '$uibModal'];
         public priceModels: Model.PriceModel;
         private priceModelResource;
-
+        private deleteForSure: boolean;
+        private deletePriceId;
         constructor(
             private $resource: ng.resource.IResourceService,
             private $state: ng.ui.IStateService,
@@ -13,6 +14,8 @@
         ) {
             this.priceModelResource = this.$resource('api/priceModel/:id');
             this.priceModels = this.getAllPriceModels();
+            this.deleteForSure = false;
+            
         }
 
         getAllPriceModels() {
@@ -36,8 +39,26 @@
             })
         }
 
-        delete(id) {
-            this.priceModelResource.delete({ id: id });
+        test() {
+            console.log('!!!!!!!!!!!');
+            this.delete(this.deletePriceId);
+        }
+        passId(id: number) {
+            console.log(id);
+            this.deletePriceId = id;
+            console.log('!!!!!!!!!!!!!!!deletePriceId is' + this.deletePriceId);
+
+        }
+
+        delete(id: number) {
+            console.log('!!!!!!!!!!! delete entering');
+            this.priceModelResource.delete({ id: id }).$promise
+                .then((data) => {
+                    this.getAllPriceModels();
+                })
+                .catch((data) => {
+                    console.log(data);
+                });
         }
 
     }
