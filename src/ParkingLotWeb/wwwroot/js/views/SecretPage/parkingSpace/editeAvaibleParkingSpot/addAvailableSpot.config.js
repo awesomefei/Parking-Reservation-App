@@ -1,9 +1,9 @@
-var AuctionApp;
-(function (AuctionApp) {
+var PrkingLotWeb;
+(function (PrkingLotWeb) {
     var Views;
     (function (Views) {
-        var Secret;
-        (function (Secret) {
+        var SecretPage;
+        (function (SecretPage) {
             var ParkingSpace;
             (function (ParkingSpace) {
                 var EditAvailableSpot;
@@ -22,8 +22,8 @@ var AuctionApp;
                     }
                     EditAvailableSpot.Configuration = Configuration;
                 })(EditAvailableSpot = ParkingSpace.EditAvailableSpot || (ParkingSpace.EditAvailableSpot = {}));
-            })(ParkingSpace = Secret.ParkingSpace || (Secret.ParkingSpace = {}));
-        })(Secret = Views.Secret || (Views.Secret = {}));
-    })(Views = AuctionApp.Views || (AuctionApp.Views = {}));
-})(AuctionApp || (AuctionApp = {}));
+            })(ParkingSpace = SecretPage.ParkingSpace || (SecretPage.ParkingSpace = {}));
+        })(SecretPage = Views.SecretPage || (Views.SecretPage = {}));
+    })(Views = PrkingLotWeb.Views || (PrkingLotWeb.Views = {}));
+})(PrkingLotWeb || (PrkingLotWeb = {}));
 //# sourceMappingURL=addAvailableSpot.config.js.map

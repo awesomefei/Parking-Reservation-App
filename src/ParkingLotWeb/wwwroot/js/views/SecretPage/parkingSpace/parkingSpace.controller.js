@@ -13,8 +13,9 @@ var PrkingLotWeb;
                 }());
                 ParkingSpace.ParkingSpaceModel = ParkingSpaceModel;
                 var ParkingSpaceController = (function () {
-                    function ParkingSpaceController($resource) {
+                    function ParkingSpaceController($resource, $uibModal) {
                         this.$resource = $resource;
+                        this.$uibModal = $uibModal;
                         this.AvailableParkingSpaceResrouce = this.$resource('api/availableParkingSpace/:id');
                         this.ParkingSpaceResource = this.$resource('api/parkingSpace/:id');
                         this.allAvailableParkingSpace = this.getAllAvailableParkingSpace();
@@ -26,11 +27,22 @@ var PrkingLotWeb;
                     ParkingSpaceController.prototype.getAllParkingSpace = function () {
                         return this.ParkingSpaceResource.query();
                     };
-                    ParkingSpaceController.prototype.postaNewAvaiableSpot = function () {
+                    ParkingSpaceController.prototype.create = function () {
+                        var _this = this;
+                        this.$uibModal.open({
+                            templateUrl: '/js/views/SecretPage/parkingSpace/editeAvaibleParkingSpot/addAvaibleSpot.html',
+                            controller: 'AddAvaibleSpotController',
+                            controllerAs: "vm",
+                            size: 'lg'
+                        }).result.then(function (data) {
+                            if (data.hasBeenEdited == true) {
+                                _this.getAllAvailableParkingSpace();
+                            }
+                        });
                     };
                     return ParkingSpaceController;
                 }());
-                ParkingSpaceController.$inject = ['$resource',];
+                ParkingSpaceController.$inject = ['$resource', '$uibModal',];
                 ParkingSpace.ParkingSpaceController = ParkingSpaceController;
             })(ParkingSpace = Secret.ParkingSpace || (Secret.ParkingSpace = {}));
         })(Secret = Views.Secret || (Views.Secret = {}));

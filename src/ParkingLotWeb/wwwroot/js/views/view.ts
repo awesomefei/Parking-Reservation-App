@@ -3,5 +3,6 @@
         'app.secret',
         'app.editPriceModel',
         'app.parkingSpace',
+        'app.addAvailableSpot'
     ]);
 }

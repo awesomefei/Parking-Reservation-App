@@ -6,6 +6,7 @@ var PrkingLotWeb;
             'app.secret',
             'app.editPriceModel',
             'app.parkingSpace',
+            'app.addAvailableSpot'
         ]);
     })(Views = PrkingLotWeb.Views || (PrkingLotWeb.Views = {}));
 })(PrkingLotWeb || (PrkingLotWeb = {}));

@@ -1,1 +1,43 @@
-﻿<h1>Hello from addAvaibleSpot.html</h1>
+﻿<div>
+    <div class="modal-header">
+        <h1>Create Page</h1>
+    </div>
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12 ">
+                <form ng-submit="vm.createANewAvailableSpot()" class="form-horizontal">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Date: </label>
+                            <div class="col-sm-8">
+                                <input type="date" class="form-control" ng-model="vm.newAvailableSpot.date" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Which hour available:</label>
+                            <div class="col-sm-8">
+                                <input type="number" min="1" max="24" class="form-control" ng-model="vm.newAvailableSpot.oneHourTime" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Parking Space Id:</label>
+                            <div class="col-sm-8">
+                                <!--<input type="text" class="form-control" ng-model="vm.newAvailableSpot.parkingSpaceId" placeholder="">-->
+                                <select class="form-control">
+                                    <option  ng-repeat="oneParkingSpace in vm.allParkingSpace">{{oneParkingSpace.id}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div align="center">
+                            <input type="submit" class="btn btn-success btn-block" value="Create">
+                            <input class='btn btn-block btn-success btn-sm' ng-click='vm.closeModal()' value="Close">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+    </div>
+</div>

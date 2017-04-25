@@ -15,7 +15,7 @@
 
         constructor(
             private $resource: ng.resource.IResourceService,
-            private $uibModal: ng.ui.bootstrap.IModalService,,
+            private $uibModal: ng.ui.bootstrap.IModalService,
             
         ) {
             this.AvailableParkingSpaceResrouce = this.$resource<Model.AvailableParkingSpot>('api/availableParkingSpace/:id');
@@ -34,7 +34,7 @@
         
         public create() {
             this.$uibModal.open({
-                templateUrl: '/js/views/SecretPage/parkingSpace/editAvaibleParkingSpot/addAvaibleSpot.html',
+                templateUrl: '/js/views/SecretPage/parkingSpace/editeAvaibleParkingSpot/addAvaibleSpot.html',
                 controller: 'AddAvaibleSpotController',
                 controllerAs: "vm",
                 size: 'lg'
