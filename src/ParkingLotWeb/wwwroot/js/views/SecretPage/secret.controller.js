@@ -10,11 +10,11 @@ var PrkingLotWeb;
                     this.$state = $state;
                     this.$uibModal = $uibModal;
                     this.priceModelResource = this.$resource('api/priceModel/:id');
-                    this.priceModels = this.getAllPriceModels();
+                    this.getAllPriceModels();
                     this.deleteForSure = false;
                 }
                 SecretController.prototype.getAllPriceModels = function () {
-                    return this.priceModelResource.query();
+                    return this.priceModels = this.priceModelResource.query();
                 };
                 SecretController.prototype.edit = function (id) {
                     var _this = this;
@@ -27,7 +27,6 @@ var PrkingLotWeb;
                         },
                         size: 'lg'
                     }).result.then(function (data) {
-                        console.log(data);
                         if (data.hasBeenEdited == true) {
                             _this.getAllPriceModels();
                         }
@@ -37,7 +36,6 @@ var PrkingLotWeb;
                     this.delete(this.deletePriceId);
                 };
                 SecretController.prototype.passId = function (id) {
-                    console.log(id);
                     this.deletePriceId = id;
                 };
                 SecretController.prototype.delete = function (id) {

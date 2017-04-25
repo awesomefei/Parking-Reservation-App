@@ -49,10 +49,5 @@
         closeModal() {
             this.$uibModalInstance.close({ hasBeenEdited: this.hasBeenEdited });
         }
-
-        private clearForm(): void {
-            this.singlePriceModel = new Model.PriceModel();
-            this.validationErrors = [];
-        }
     }
 }

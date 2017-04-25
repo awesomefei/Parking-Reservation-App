@@ -26,7 +26,7 @@ namespace ParkingLotWeb.Data
         {
             base.OnModelCreating(builder);
             builder.Entity<UnavailableParkingSpace>().HasKey(x => new { x.Id });
-            //builder.Entity<AvaliableParkingSpace>().HasKey(x => new { x.OneHourTime, x.ParkingSpaceId });
+            builder.Entity<AvaliableParkingSpace>().HasIndex(x => new { x.OneHourTime, x.ParkingSpaceId });
             //builder.Entity<ParkingSpace>().HasKey(x => new { x.SpaceNum, x.Zoon});
             // Customize the ASP.NET Identity model and override the defaults if needed.
             // For example, you can rename the ASP.NET Identity table names and more.

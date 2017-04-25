@@ -252,6 +252,8 @@
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170424223503_UpdateAvaliableParkingSpace.Designer.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170424223710_UpdateAvaliableAndUnavailableParkingSpace.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170424223710_UpdateAvaliableAndUnavailableParkingSpace.Designer.cs"
+"C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170425212552_AddIndexToAvailableParkingSpace.cs"
+"C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\20170425212552_AddIndexToAvailableParkingSpace.Designer.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Data\Migrations\ApplicationDbContextModelSnapshot.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\ApplicationUser.cs"
 "C:\Users\Ann\Source\Repos\ParkingApp\ParkingLotWeb\src\ParkingLotWeb\Models\AvaliableParkingSpace.cs"

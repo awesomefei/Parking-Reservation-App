@@ -44,10 +44,6 @@ var PrkingLotWeb;
                     EditPriceModelController.prototype.closeModal = function () {
                         this.$uibModalInstance.close({ hasBeenEdited: this.hasBeenEdited });
                     };
-                    EditPriceModelController.prototype.clearForm = function () {
-                        this.singlePriceModel = new PrkingLotWeb.Model.PriceModel();
-                        this.validationErrors = [];
-                    };
                     return EditPriceModelController;
                 }());
                 EditPriceModelController.$inject = ['$resource', '$uibModalInstance', '$state', 'priceModelId1'];

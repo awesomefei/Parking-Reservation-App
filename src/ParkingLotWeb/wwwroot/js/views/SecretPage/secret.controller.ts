@@ -13,13 +13,13 @@
 
         ) {
             this.priceModelResource = this.$resource('api/priceModel/:id');
-            this.priceModels = this.getAllPriceModels();
+             this.getAllPriceModels();
             this.deleteForSure = false;
             
         }
 
         getAllPriceModels() {
-            return this.priceModelResource.query();
+            return this.priceModels = this.priceModelResource.query();
         }
 
         public edit(id) {
@@ -32,7 +32,6 @@
                 },
                 size: 'lg'
             }).result.then((data) => {
-                console.log(data);
                 if (data.hasBeenEdited == true) {
                     this.getAllPriceModels();
                 }
@@ -43,7 +42,6 @@
             this.delete(this.deletePriceId);
         }
         passId(id: number) {
-            console.log(id);
             this.deletePriceId = id;
 
         }

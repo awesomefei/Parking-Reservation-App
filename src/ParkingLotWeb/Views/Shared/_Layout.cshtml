@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -20,8 +20,9 @@
                 </button>
                 <a class="navbar-brand"  href="#">ParkingLotWeb</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" ng-controller="HomeController as vm">
                 <ul class="nav navbar-nav">
+                    <li><a ui-sref="Reservation">Reservation</a></li>
                     <li><a ui-sref="Secret">Secret</a></li>
                 </ul>
             </div>
@@ -45,6 +46,9 @@
     <script src="~/js/models/priceModel.model.js"></script>
     <script src="~/js/models/available.model.js"></script>
 
+    <script src="~/js/views/home/home.controller.js"></script>
+    <script src="~/js/views/home/home.config.js"></script>
+    <script src="~/js/views/home/home.js"></script>
 
     <script src="~/js/views/SecretPage/secret.controller.js"></script>
     <script src="~/js/views/SecretPage/secret.config.js"></script>
@@ -62,9 +66,9 @@
     <script src="~/js/views/SecretPage/parkingSpace/editeAvaibleParkingSpot/addAvailableSpot.config.js"></script>
     <script src="~/js/views/SecretPage/parkingSpace/editeAvaibleParkingSpot/addAvailableSpot.js"></script>
 
-
-
-
+    <script src="~/js/views/reservation/reservation.controller.js"></script>
+    <script src="~/js/views/reservation/reservation.config.js"></script>
+    <script src="~/js/views/reservation/reservation.js"></script>
 
 
 
