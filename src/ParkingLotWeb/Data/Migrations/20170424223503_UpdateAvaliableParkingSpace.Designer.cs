@@ -8,9 +8,10 @@ using ParkingLotWeb.Data;
 namespace ParkingLotWeb.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170424223503_UpdateAvaliableParkingSpace")]
+    partial class UpdateAvaliableParkingSpace
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -179,11 +180,11 @@ namespace ParkingLotWeb.Data.Migrations
 
                     b.Property<bool>("Active");
 
-                    b.Property<DateTime>("Date");
+                    b.Property<string>("Date");
 
-                    b.Property<DateTime>("LastUpdateTime");
+                    b.Property<string>("LastUpdateTime");
 
-                    b.Property<int>("OneHourTime");
+                    b.Property<string>("OneHourTime");
 
                     b.Property<int>("ParkingSpaceId");
 
@@ -249,11 +250,11 @@ namespace ParkingLotWeb.Data.Migrations
 
                     b.Property<bool>("Active");
 
-                    b.Property<DateTime>("Date");
+                    b.Property<string>("Date");
 
-                    b.Property<DateTime>("LastUpdateTime");
+                    b.Property<string>("LastUpdateTime");
 
-                    b.Property<int>("OneHourTime");
+                    b.Property<string>("OneHourTime");
 
                     b.Property<int>("ParkingSpaceId");
 

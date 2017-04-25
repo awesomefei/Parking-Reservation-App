@@ -53,6 +53,7 @@ namespace ParkingLotWeb
             services.AddScoped<ParkingSpaceService>();
             services.AddScoped<IGerneralRepositpry, GerneralRepositpry>();
             services.AddScoped<PriceService>();
+            services.AddScoped<AvailableParkingSpaceService>();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();

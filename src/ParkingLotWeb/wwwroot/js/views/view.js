@@ -5,6 +5,7 @@ var PrkingLotWeb;
         var module = angular.module('app.views', [
             'app.secret',
             'app.editPriceModel',
+            'app.parkingSpace',
         ]);
     })(Views = PrkingLotWeb.Views || (PrkingLotWeb.Views = {}));
 })(PrkingLotWeb || (PrkingLotWeb = {}));

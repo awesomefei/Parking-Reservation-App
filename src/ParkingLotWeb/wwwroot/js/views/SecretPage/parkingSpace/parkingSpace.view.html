@@ -1,0 +1,71 @@
+﻿<h1>Welcome to ParkingSpace Page</h1>
+
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Parking Space Id</th>
+                <th>Sapce Num</th>
+                <th>Zoon</th>
+                <th>Car type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="oneParkingSpace in vm.allParkingSpace">
+                <td>{{oneParkingSpace.id}}</td>
+                <td>{{oneParkingSpace.spaceNum}}</td>
+                <td>{{oneParkingSpace.zoon}}</td>
+                <td>{{oneParkingSpace.vehicleType}}</td>
+                <td>
+                    <a class="btn btn-warning">Edit</a>
+                    <a class="btn btn-danger" onclick="$('.alert').show()">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="alert  alert-danger" style="display: none">
+        <a class="close" onclick="$('.alert').hide()">Cancle</a>
+        <a href="#" class="close" data-dismiss="alert" ng-click="vm.test()">Delete &nbsp&nbsp&nbsp&nbsp</a>
+        <p><strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.</p>
+        <p>Do you really want to DELETE it?</p>
+    </div>
+    <button type="button" class="btn btn-primary">Create a new entry to ParkingSpot Table</button>
+</div>
+
+<hr /><hr /><hr /><hr />
+
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Active</th>
+                <th>Date Type</th>
+                <th>LastUpdateTime</th>
+                <th>StartTime(One hour)</th>
+                <th>ParkingSpaceId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="oneAvailableParkingSpot in vm.allAvailableParkingSpace">
+
+                <td>{{oneAvailableParkingSpot.active}}</td>
+                <td>{{oneAvailableParkingSpot.date}}</td>
+                <td>{{oneAvailableParkingSpot.lastUpdateTime}}</td>
+                <td>{{oneAvailableParkingSpot.oneHourTime}}</td>
+                <td>{{oneAvailableParkingSpot.parkingSpaceId}}</td>
+                <td>
+                    <a class="btn btn-warning" >Edit</a>
+                    <a class="btn btn-danger" onclick="$('.alert').show()">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="alert  alert-danger" style="display: none">
+        <a class="close" onclick="$('.alert').hide()">Cancle</a>
+        <a href="#" class="close" data-dismiss="alert" ng-click="vm.test()">Delete &nbsp&nbsp&nbsp&nbsp</a>
+        <p><strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.</p>
+        <p>Do you really want to DELETE it?</p>
+    </div>
+    <button type="button" class="btn btn-primary">Create a new entry to Available Parking Spot</button>
+
+</div>

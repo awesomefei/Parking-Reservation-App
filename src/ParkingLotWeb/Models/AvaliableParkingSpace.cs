@@ -9,9 +9,9 @@ namespace ParkingLotWeb.Models
     {
         public int Id { get; set; }
         public int ParkingSpaceId { get; set; }
-        public string Date { get; set; }
-        public string OneHourTime { get; set; }
+        public DateTime Date { get; set; }
+        public int OneHourTime { get; set; }
         public Boolean Active { get; set; }
-        public string LastUpdateTime { get; set; }
+        public DateTime LastUpdateTime { get; set; }
     }
 }

@@ -19,7 +19,6 @@
                     method: 'PUT'
                 }
             });
-            this.hasBeenEdited = false;
             this.getSinglePriceModel(priceModelId);
             this.hasBeenEdited = false;
 
