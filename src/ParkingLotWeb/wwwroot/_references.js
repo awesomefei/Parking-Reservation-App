@@ -4,6 +4,7 @@
 /// <reference path="js/app.run.js" />
 /// <reference path="js/models/available.model.js" />
 /// <reference path="js/models/pricemodel.model.js" />
+/// <reference path="js/models/unavailable.js" />
 /// <reference path="js/views/home/home.config.js" />
 /// <reference path="js/views/home/home.controller.js" />
 /// <reference path="js/views/home/home.js" />

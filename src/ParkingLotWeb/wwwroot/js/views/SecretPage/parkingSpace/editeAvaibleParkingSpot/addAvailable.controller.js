@@ -12,6 +12,7 @@ var PrkingLotWeb;
                         function AddAvaibleSpotController($resource, $uibModalInstance) {
                             this.$resource = $resource;
                             this.$uibModalInstance = $uibModalInstance;
+                            this.validationErrors = [];
                             this.availableSpotResource = this.$resource('api/availableParkingSpace/:id');
                             this.parkingSpaceResource = this.$resource('api/parkingSpace/:id');
                             this.hasBeenEdited = false;
@@ -24,9 +25,18 @@ var PrkingLotWeb;
                             this.$uibModalInstance.close({ hasBeenEdited: this.hasBeenEdited });
                         };
                         AddAvaibleSpotController.prototype.createANewAvailableSpot = function (newAvailableSpot) {
+                            var _this = this;
                             newAvailableSpot = this.newAvailableSpot;
-                            this.availableSpotResource.save(newAvailableSpot);
-                            this.closeModal();
+                            this.availableSpotResource.save(newAvailableSpot).$promise
+                                .then(function (data) {
+                                _this.hasBeenEdited = true;
+                                _this.closeModal();
+                            })
+                                .catch(function (response) {
+                                for (var prop in response.data) {
+                                    _this.validationErrors.push(prop + " - " + response.data[prop]);
+                                }
+                            });
                         };
                         return AddAvaibleSpotController;
                     }());

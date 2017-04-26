@@ -9,5 +9,6 @@ namespace ParkingLotWeb.Models
     {
         public int Id { get; set; }
         public int payment { get; set; }
+        public string Phone { get; set; }
     }
 }

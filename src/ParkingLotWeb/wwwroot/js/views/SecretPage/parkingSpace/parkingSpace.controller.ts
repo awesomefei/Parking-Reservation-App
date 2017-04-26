@@ -20,16 +20,16 @@
         ) {
             this.AvailableParkingSpaceResrouce = this.$resource<Model.AvailableParkingSpot>('api/availableParkingSpace/:id');
             this.ParkingSpaceResource = this.$resource<ParkingSpaceModel>('api/parkingSpace/:id');
-            this.allAvailableParkingSpace = this.getAllAvailableParkingSpace();
-            this.allParkingSpace = this.getAllParkingSpace();
+            this.getAllAvailableParkingSpace();
+            this.getAllParkingSpace();
         }
 
         public getAllAvailableParkingSpace() {
-            return this.AvailableParkingSpaceResrouce.query();
+            return this.allAvailableParkingSpace = this.AvailableParkingSpaceResrouce.query();
         }
 
         public getAllParkingSpace() {
-            return this.ParkingSpaceResource.query();
+            return this.allParkingSpace =this.ParkingSpaceResource.query();
         }
         
         public create() {

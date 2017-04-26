@@ -8,7 +8,7 @@
     ) {
         $stateProvider
             .state('Reservation', <ng.ui.IState>{
-                url: '/',
+                url: '/reservation',
                 templateUrl: 'js/views/reservation/reservation.view.html',
                 controller: 'ReservationController',
                 controllerAs: 'vm'

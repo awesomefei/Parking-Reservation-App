@@ -18,14 +18,14 @@ var PrkingLotWeb;
                         this.$uibModal = $uibModal;
                         this.AvailableParkingSpaceResrouce = this.$resource('api/availableParkingSpace/:id');
                         this.ParkingSpaceResource = this.$resource('api/parkingSpace/:id');
-                        this.allAvailableParkingSpace = this.getAllAvailableParkingSpace();
-                        this.allParkingSpace = this.getAllParkingSpace();
+                        this.getAllAvailableParkingSpace();
+                        this.getAllParkingSpace();
                     }
                     ParkingSpaceController.prototype.getAllAvailableParkingSpace = function () {
-                        return this.AvailableParkingSpaceResrouce.query();
+                        return this.allAvailableParkingSpace = this.AvailableParkingSpaceResrouce.query();
                     };
                     ParkingSpaceController.prototype.getAllParkingSpace = function () {
-                        return this.ParkingSpaceResource.query();
+                        return this.allParkingSpace = this.ParkingSpaceResource.query();
                     };
                     ParkingSpaceController.prototype.create = function () {
                         var _this = this;

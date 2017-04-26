@@ -7,6 +7,8 @@
         private parkingSpaceResource;
         private hasBeenEdited;
         private allParkingSpace: Secret.ParkingSpace.ParkingSpaceModel;
+        public validationErrors: string[] = [];
+
         constructor(
             private $resource: ng.resource.IResourceService,
             private $uibModalInstance: ng.ui.bootstrap.IModalServiceInstance,
@@ -24,8 +26,16 @@
         }
         createANewAvailableSpot(newAvailableSpot: Model.AvailableParkingSpot) {
             newAvailableSpot = this.newAvailableSpot;
-            this.availableSpotResource.save(newAvailableSpot);
-            this.closeModal();
+            this.availableSpotResource.save(newAvailableSpot).$promise
+                .then((data) => {
+                    this.hasBeenEdited = true;
+                    this.closeModal();
+                })
+                .catch((response: any) => {
+                    for (let prop in response.data) {
+                        this.validationErrors.push(`${prop} - ${response.data[prop]}`);
+                    }
+                });
         }
 
     }

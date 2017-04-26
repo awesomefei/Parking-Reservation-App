@@ -10,7 +10,7 @@ var PrkingLotWeb;
             function Configuration($stateProvider) {
                 $stateProvider
                     .state('Reservation', {
-                    url: '/',
+                    url: '/reservation',
                     templateUrl: 'js/views/reservation/reservation.view.html',
                     controller: 'ReservationController',
                     controllerAs: 'vm'
